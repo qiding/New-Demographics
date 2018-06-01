@@ -1,0 +1,165 @@
+
+
+Writing Project Responses
+
+
+
+Claire (Qi) Ding
+
+
+
+Email: qiding.purdue@gmail.com
+
+
+
+When a new business
+signs up for stripe, we need to verify that the products or services being
+offered don’t violate our terms of service. Given that thousands of new
+accounts are registered on stripe each day. How would you approach setting up a
+process to monitor and track this information efficiently?
+
+
+
+First, I will tag the products or services with
+their segmentations, location, high-moderate-low volume, business size, time
+& amount etc.  The tags will be ingested
+in a background dataset and stored chronically in the data warehouse. Regular
+reporting process on a daily, monthly, quarterly and yearly would be
+implemented to monitor business activities and transactions. 
+
+ 
+
+Based on the data ingestion, a score based audit
+system can be utilized to detect abnormal activities. For example, segmentation
+can have 10 risk levels including a segmentation risk score of 10-100. Food
+business is considered low risk segment, so it will have a 10 at this section.
+Another section can be monthly or daily transaction amount. If it’s under
+$1000, it will have a transaction risk score of 10. By adding up the risk
+scores, each business would have an overall risk score, and thresholds would be
+set to filter on risk score at each section and the overall risk score. Hence,
+businesses can be ranked on how much the scores are above the thresholds, or
+filtered based on location or segmentation. 
+
+ 
+
+ 
+
+The scoring system can monitor business
+transactions on a monthly or daily basis, and it will categorize businesses
+into four categories: a) High risk, high impacts. This category should have top
+priority and abnormal activities should be immediately reported and
+investigated. 
+
+b) Moderate to low risk, high impacts. This
+category should have secondary priority, and their activities can be closely
+monitored. Communication with the account owner would be required.  c) High risk, low impacts. Automated messages
+can be generated to notify the business owners. d) Moderate to low risk, low
+impacts.  This type of activities can be
+monitored and reported on a weekly or monthly basis. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+After you have set up
+your process above, now imagine the amount of accounts you need to screen
+suddenly doubles overnights. What (if anything) would you change in your
+processes to manage this new level of demand?
+
+
+
+The aforementioned process would be a very rough
+draft of the monitor system. It requires an application that we can run the
+algorithm every day and it’s based on a simplified risk scoring system. When
+the volume of accounts increases, a more sophisticated algorithm would be
+required to screen the accounts. 
+
+ 
+
+When the amount of data increases, a distributed
+system that collects and analyzes user data can be implemented (e.g., HIVE).
+When the systematic capacity increases, more behavioral, transactional and user
+data would be ingested. Using the data, a much more sophisticated scoring
+system should be implemented to reflect the risk level of the businesses. 
+
+Historical data can be pulled and build a risk
+model to calculate a more accurate risk score. The model can be implemented to
+upgrade the account screening algorithm. 
+
+Accounts will be screened on more criteria, and
+the thresholds can be adjusted accordingly. The new screening system would be a
+lot more focused and efficient that the accounts with the highest risk scores
+would be examined more closely. The risk model would also provide clearer
+instructions on where to look for the problems. 
+
+
+
+
+
+
+
+
+
+
+
+
+Describe a time you
+led a challenging project from start to finish in your current or past role.
+What was the goal of the project and what obstacles did you overcome to reach
+it? How did you mobilize stakeholders (or yourself) to overcome these
+obstacles, what were the biggest challenges, and what would you have done
+differently in hindsight? What processes did you put in place to make future
+project easier? 
+
+
+
+             I
+initiated a project that utilized machine learning technique to help my
+previous employer to detect pharmacy fraudulent behaviors. The goal of this
+project is to build risk models to detect fraud at the pharmacy level and at
+the claim level more efficiently. Currently, more manual work is involved in
+fraud detection, but after the data warehouse was built, the company data
+ingestion capacity increased. With sufficient data, I realized we can use a
+machine learning model to automate the fraud detection process. 
+
+
+
+            The most
+challenging part is to present how the new technique is worth the investment in
+saving the operational costs in the future. Especially when the industry is not
+highly involved with using data services to automate some internal processes,
+it’s challenging to show the stakeholders my expected outcomes. To solve this
+issue, I pulled the pharmacy and claim data for the previous month, and built a
+sample model to show potential outcomes from this model and how we can utilize
+the model. Based on the results, my ideal outcome would be a list of pharmacies
+and claims that are at highest risk level and the investigation team can
+immediately take actions on them without lots of manual work. The management
+team thinks this project aligns with their goal of developing the company as an
+industry thought leader, so they gave me permission and resources to continue
+with this project. Therefore I was able to pull more data and provided the list
+of pharmacies with highest risk for the investigation team.
+
+
+
+             If I
+could do this project again, I would get more people involved on this project,
+rather than me working on this project from end to end. Fraud detection is a
+project that requires insights from many departments and it should be a team
+project because a large amount of information is processed. I would prefer
+leading a team of data scientist and developers to work on the full cycle or
+pulling data, cleansing data, data analyzing and modeling, testing the model
+and model deploy. I would also implement a corresponding data ingestion process
+for the risk management purpose. 
+
+
+
